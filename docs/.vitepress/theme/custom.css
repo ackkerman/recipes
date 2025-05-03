@@ -2,6 +2,9 @@
 
 /* ライトテーマ */
 :root {
+  --vp-font-family-base: 'MyCustomFont', sans-serif;
+  --vp-font-family-mono: 'MyCustomFont', monospace;
+
   /* ブランドカラー（くすみグリーン系） */
   --vp-c-brand-1: #7fa37b;
   --vp-c-brand-2: #a8c3a4;
@@ -36,4 +39,12 @@
 
   --vp-c-border: #444;
   --vp-c-border-soft: #555;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/font.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
