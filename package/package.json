@@ -2,12 +2,14 @@
   "name": "create-recipe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "create-recipe": "./src/index.ts"
+    "create-recipe": "./dist/index.js"
   },
   "scripts": {
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
