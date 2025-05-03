@@ -36,7 +36,7 @@ program
   .action(async (url, options) => {
     let promptText: string;
     if (isImageUrl(url)) {
-      promptText = `以下の料理画像から、レシピを想像してMarkdownテンプレートに沿って出力してください。`;
+      promptText = `料理画像からレシピを読み取り、Markdownテンプレートに沿って出力してください。`;
     } else {
       const rawText = await scrapeTextFromPage(url);
       promptText = formatWithTemplate(rawText);
