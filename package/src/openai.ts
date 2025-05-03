@@ -10,11 +10,28 @@ const client = new OpenAI(
 );
 
 
-export async function generateMarkdown(prompt: string): Promise<string> {
-  const res = await client.responses.create({
+export async function generateMarkdown(prompt: string, imageUrl?: string): Promise<string> {
+  // @ts-ignore
+  const res = await client.chat.completions.create({
     model: "gpt-4o",
-    input: prompt,
+    messages: [
+      {
+        role: "user",
+        content: [
+          { type: "text", text: prompt },
+          // @ts-ignore
+          imageUrl && {
+            type: 'image_url',
+            image_url: {
+              url: imageUrl
+            }
+          }
+        ]
+      },
+    ],
   });
 
-  return res.output_text || "";
+  return res.choices[0].message.content || "";
 }
+
+
