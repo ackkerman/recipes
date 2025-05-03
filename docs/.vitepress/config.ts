@@ -1,17 +1,31 @@
 import { defineConfig } from 'vitepress'
+import fs from 'fs'
+import path from 'path'
+
+// docs/recipes フォルダを読む関数
+function getRecipeSidebar() {
+  const recipesDir = path.resolve(__dirname, '../recipes')
+  const files = fs.readdirSync(recipesDir)
+
+  return files
+    .filter(file => file.endsWith('.md'))
+    .map(file => {
+      const name = file.replace(/\.md$/, '')
+      return {
+        text: name,
+        link: `/recipes/${name}`
+      }
+    })
+}
 
 export default defineConfig({
   title: 'レシピコレクション',
-  description: '自作レシピ集',
+  description: 'レシピ一覧',
   themeConfig: {
     sidebar: [
       {
         text: 'レシピ一覧',
-        items: [
-          { text: 'クッキーシューのクッキー生地', link: '/recipes/クッキーシューのクッキー生地' },
-          { text: 'チーズ肉巻きおにぎり', link: '/recipes/チーズ肉巻きおにぎり' },
-          // 以下同様に追加
-        ]
+        items: getRecipeSidebar()
       }
     ]
   }
