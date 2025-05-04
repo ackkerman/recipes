@@ -1,5 +1,7 @@
 # recipes
 
+https://recipes-alpha-ten.vercel.app/
+
 ## 🍳 レシピファイルの作成
 
 ```bash
