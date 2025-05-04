@@ -1,0 +1,50 @@
+/* docs/.vitepress/theme/custom.css */
+
+/* ライトテーマ */
+:root {
+  --vp-font-family-base: 'MyCustomFont', sans-serif;
+  --vp-font-family-mono: 'MyCustomFont', monospace;
+
+  /* ブランドカラー（くすみグリーン系） */
+  --vp-c-brand-1: #7fa37b;
+  --vp-c-brand-2: #a8c3a4;
+  --vp-c-brand-3: #cce0ca;
+
+  --vp-c-bg: #F1EFEC;
+  --vp-c-bg-soft: #f4f4f2;
+  --vp-c-bg-alt: #ececea;
+
+  --vp-c-text-1: #333;
+  --vp-c-text-2: #555;
+  --vp-c-text-3: #777;
+
+  --vp-c-border: #5e5e5e;
+  --vp-c-border-soft: #e5e5e5;
+}
+
+/* ダークテーマ */
+.dark {
+  /* ブランドカラーをやや深いグリーン系に */
+  --vp-c-brand-1: #6f9270;
+  --vp-c-brand-2: #8fb191;
+  --vp-c-brand-3: #b3d0b4;
+
+  --vp-c-bg: #3e3e3e;
+  --vp-c-bg-soft: #2b2b2b;
+  --vp-c-bg-alt: #525252;
+
+  --vp-c-text-1: #f0f0f0;
+  --vp-c-text-2: #cccccc;
+  --vp-c-text-3: #999999;
+
+  --vp-c-border: #444;
+  --vp-c-border-soft: #555;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/font.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
