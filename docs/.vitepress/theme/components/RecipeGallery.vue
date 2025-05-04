@@ -43,7 +43,11 @@
       :href="recipe.link"
       class="recipe-card"
     >
-      <img v-if="recipe.image" :src="recipe.image" alt="" class="recipe-image" />
+      <img
+        :src="recipe.image || '/default-no-image.png'"
+        alt=""
+        class="recipe-image"
+      />
       <h3>{{ recipe.title }}</h3>
     </a>
   </div>
@@ -51,15 +55,30 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watchEffect } from 'vue'
 import recipesRaw from '../../recipes.json'
 
 // タグ管理
 const selectedTag = ref<string | null>(null)
 const isExpanded = ref(false)
 
+const urlParams = new URLSearchParams(window.location.search)
+const initialTag = urlParams.get('tag')
+if (initialTag) {
+  selectedTag.value = decodeURIComponent(initialTag)
+}
+
+// タグ選択時にURLを更新
 const selectTag = (tag: string | null) => {
   selectedTag.value = tag
+  const params = new URLSearchParams(window.location.search)
+  if (tag) {
+    params.set('tag', tag)
+  } else {
+    params.delete('tag')
+  }
+  const newUrl = `${window.location.pathname}?${params.toString()}`
+  window.history.replaceState({}, '', newUrl)
 }
 
 // 全タグ一覧（ユニーク）
@@ -124,7 +143,7 @@ const toggleExpanded = () => {
   align-items: flex-end;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--vp-c-text-1);
+  color: #333;
   cursor: pointer;
   padding-bottom: 0.5rem;
 }
@@ -138,7 +157,7 @@ const toggleExpanded = () => {
 
 .fade-overlay span:hover {
   background: var(--vp-c-brand-1);
-  color: white;
+  color: var(--vp-c-text-1);
 }
 
 .filter-bar button {
@@ -153,7 +172,7 @@ const toggleExpanded = () => {
 .filter-bar button.active,
 .filter-bar button:hover {
   background: var(--vp-c-brand-1);
-  color: #fff;
+  color: var(--vp-c-text-1);
 }
 
 .close-button {
@@ -168,7 +187,7 @@ const toggleExpanded = () => {
   border-radius: 9999px;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--vp-c-text-1);
+  color: #333;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
@@ -176,7 +195,7 @@ const toggleExpanded = () => {
 
 .close-button:hover {
   background: var(--vp-c-brand-1);
-  color: white;
+  color: var(--vp-c-text-1);
 }
 
 

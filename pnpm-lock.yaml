@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      feather-icons:
+        specifier: '4'
+        version: 4.29.2
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
+      vue-feather:
+        specifier: '2'
+        version: 2.0.0(feather-icons@4.29.2)(vue@3.5.13(typescript@5.8.3))
     devDependencies:
       '@types/node':
         specifier: ^22.15.3
@@ -704,12 +710,18 @@ packages:
   character-entities-legacy@3.0.0:
     resolution: {integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==}
 
+  classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
+
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
 
   copy-anything@3.0.5:
     resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
     engines: {node: '>=12.13'}
+
+  core-js@3.42.0:
+    resolution: {integrity: sha512-Sz4PP4ZA+Rq4II21qkNqOEDTDrCvcANId3xpIgB34NDkWc3UduWj2dqEtN9yZIq8Dk3HyPI33x9sqqU5C8sr0g==}
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
@@ -749,6 +761,9 @@ packages:
   extend-shallow@2.0.1:
     resolution: {integrity: sha512-zCnTtlxNoAiDc3gqY2aYAWFx7XWWiasuF2K8Me5WbN8otHKTUKBwjPtNpRs/rbUZm7KxWAaNj7P1a/p52GbVug==}
     engines: {node: '>=0.10.0'}
+
+  feather-icons@4.29.2:
+    resolution: {integrity: sha512-0TaCFTnBTVCz6U+baY2UJNKne5ifGh7sMG4ZC2LoBWCZdIyPa+y6UiR4lEYGws1JOFWdee8KAsAIvu0VcXqiqA==}
 
   focus-trap@7.6.4:
     resolution: {integrity: sha512-xx560wGBk7seZ6y933idtjJQc1l+ck+pI3sKvhKozdBV1dRZoKhkW5xoCaFv9tQiX5RH1xfSxjuNu6g+lmN/gw==}
@@ -984,6 +999,12 @@ packages:
         optional: true
       postcss:
         optional: true
+
+  vue-feather@2.0.0:
+    resolution: {integrity: sha512-GBvxJWu2ycGTpB8duYWnc5S/TwWPPb2G5Ft2NbkwK1vZkUDUOTYqIb4Nh1HOL6A37Isfrd0Guun0lesS97PfxA==}
+    peerDependencies:
+      feather-icons: ^4.28.0
+      vue: ^3.0.0
 
   vue@3.5.13:
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==}
@@ -1553,11 +1574,15 @@ snapshots:
 
   character-entities-legacy@3.0.0: {}
 
+  classnames@2.5.1: {}
+
   comma-separated-tokens@2.0.3: {}
 
   copy-anything@3.0.5:
     dependencies:
       is-what: 4.1.16
+
+  core-js@3.42.0: {}
 
   csstype@3.1.3: {}
 
@@ -1632,6 +1657,11 @@ snapshots:
   extend-shallow@2.0.1:
     dependencies:
       is-extendable: 0.1.1
+
+  feather-icons@4.29.2:
+    dependencies:
+      classnames: 2.5.1
+      core-js: 3.42.0
 
   focus-trap@7.6.4:
     dependencies:
@@ -1927,6 +1957,11 @@ snapshots:
       - terser
       - typescript
       - universal-cookie
+
+  vue-feather@2.0.0(feather-icons@4.29.2)(vue@3.5.13(typescript@5.8.3)):
+    dependencies:
+      feather-icons: 4.29.2
+      vue: 3.5.13(typescript@5.8.3)
 
   vue@3.5.13(typescript@5.8.3):
     dependencies:

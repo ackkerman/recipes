@@ -21,6 +21,8 @@
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3"
+    "feather-icons": "4",
+    "gray-matter": "^4.0.3",
+    "vue-feather": "2"
   }
 }
