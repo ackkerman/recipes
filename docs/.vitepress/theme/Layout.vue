@@ -8,7 +8,9 @@ const { frontmatter } = useData()
 // クリック時にトップへリダイレクト
 const goToTag = (tag: string) => {
   const url = `/?tag=${encodeURIComponent(tag)}`
-  window.location.href = url
+  if (typeof window !== 'undefined') {
+    window.location.href = url
+  }
 }
 </script>
 
@@ -18,7 +20,7 @@ const goToTag = (tag: string) => {
       <div class="recipe-header">
         <img
           v-if="frontmatter.image"
-          :src="frontmatter.image"
+          :src="frontmatter.image  || '/default-food.jpg'"
           alt="Recipe Header Image"
           class="recipe-header-image"
         />

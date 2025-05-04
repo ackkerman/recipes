@@ -62,10 +62,12 @@ import recipesRaw from '../../recipes.json'
 const selectedTag = ref<string | null>(null)
 const isExpanded = ref(false)
 
-const urlParams = new URLSearchParams(window.location.search)
-const initialTag = urlParams.get('tag')
-if (initialTag) {
-  selectedTag.value = decodeURIComponent(initialTag)
+if (typeof window !== 'undefined') {
+  const urlParams = new URLSearchParams(window.location.search)
+  const initialTag = urlParams.get('tag')
+  if (initialTag) {
+    selectedTag.value = decodeURIComponent(initialTag)
+  }
 }
 
 // タグ選択時にURLを更新

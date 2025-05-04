@@ -28,7 +28,7 @@
   {
     "title": "ネギ塩豚カルビ（下味冷凍）",
     "link": "/recipes/ネギ塩豚カルビ（下味冷凍）",
-    "image": "../images/ネギ塩豚カルビ.png",
+    "image": "/images/ネギ塩豚カルビ.png",
     "tags": [
       "時短レシピ",
       "冷凍ストック",
@@ -67,7 +67,7 @@
   {
     "title": "レストランで教わったサーモンマリネ",
     "link": "/recipes/レストランで教わったサーモンマリネ",
-    "image": "../images/レストランで教わったサーモンマリネ.png",
+    "image": "/images/レストランで教わったサーモンマリネ.png",
     "tags": [
       "時短レシピ",
       "おもてなし",
@@ -130,7 +130,7 @@
   {
     "title": "旨塩ねぎダレ",
     "link": "/recipes/旨塩ねぎダレ",
-    "image": "../images/旨塩ねぎダレ.png",
+    "image": "/images/旨塩ねぎダレ.png",
     "tags": [
       "万能ダレ",
       "焼肉",
@@ -155,7 +155,7 @@
   {
     "title": "炊飯器マッシュポテト",
     "link": "/recipes/炊飯器マッシュポテト",
-    "image": "../images/炊飯器マッシュポテト.png",
+    "image": "/images/炊飯器マッシュポテト.png",
     "tags": [
       "時短レシピ",
       "炊飯器レシピ",
@@ -168,7 +168,7 @@
   {
     "title": "餡かけ焼きそば",
     "link": "/recipes/餡かけ焼きそば",
-    "image": "../images/餡かけ焼きそば.png",
+    "image": "/images/餡かけ焼きそば.png",
     "tags": [
       "あんかけ",
       "焼きそば",
