@@ -7,10 +7,13 @@
       "スイーツレシピ",
       "クッキーシュー",
       "パティシエレシピ",
-      "簡単スイーツ"
+      "簡単スイーツ",
+      "スイーツ"
     ],
     "servings": "約作りやすい量",
-    "source": "https://www.instagram.com/reel/DIlh0KSTaq_/?igsh=dHY5eHF5eWM4dGZ3"
+    "source": "https://www.instagram.com/reel/DIlh0KSTaq_/?igsh=dHY5eHF5eWM4dGZ3",
+    "time": 30,
+    "calories": 300
   },
   {
     "title": "チーズ肉巻きおにぎり",
@@ -20,10 +23,13 @@
       "がっつりご飯",
       "おにぎりアレンジ",
       "チーズ",
-      "豚肉料理"
+      "豚肉料理",
+      "主菜"
     ],
     "servings": "2〜3",
-    "source": "https://x.com/pikichidesuyo/status/1911743848516395049"
+    "source": "https://x.com/pikichidesuyo/status/1911743848516395049",
+    "time": 30,
+    "calories": 500
   },
   {
     "title": "ネギ塩豚カルビ（下味冷凍）",
@@ -33,10 +39,13 @@
       "時短レシピ",
       "冷凍ストック",
       "ご飯が進む",
-      "焼肉風"
+      "焼肉風",
+      "主菜"
     ],
     "servings": 2,
-    "source": "https://x.com/yomogi_168/status/1917323169700143192"
+    "source": "https://x.com/yomogi_168/status/1917323169700143192",
+    "time": 30,
+    "calories": 400
   },
   {
     "title": "ピーマンのこってりチーズ肉巻き",
@@ -46,10 +55,29 @@
       "時短レシピ",
       "ご飯が進む",
       "チーズ",
-      "豚肉"
+      "豚肉",
+      "主菜"
     ],
     "servings": 2,
-    "source": "https://x.com/mainooyatsu/status/1917179858939158744"
+    "source": "https://x.com/mainooyatsu/status/1917179858939158744",
+    "time": 20,
+    "calories": 450
+  },
+  {
+    "title": "ブロッコリーと卵のサラダ",
+    "link": "/recipes/ブロッコリーと卵のサラダ",
+    "image": "/upload/save_image/d0/d0d1d79926d21121036173a653546cc0.jpeg",
+    "tags": [
+      "副菜",
+      "サラダ",
+      "たまごサラダ",
+      "デリ風",
+      "作り置き"
+    ],
+    "servings": 2,
+    "source": "https://oceans-nadia.com/user/253470/recipe/392579",
+    "time": 20,
+    "calories": 250
   },
   {
     "title": "ホテルオークラ特製スコーン",
@@ -59,10 +87,14 @@
       "オークラレシピ",
       "スコーン",
       "おもてなし",
-      "手作りお菓子"
+      "手作りお菓子",
+      "主菜",
+      "スイーツ"
     ],
     "servings": 10,
-    "source": "https://theokuratokyo.jp/letter/recipe/scone/"
+    "source": "https://theokuratokyo.jp/letter/recipe/scone/",
+    "time": 60,
+    "calories": 2500
   },
   {
     "title": "レストランで教わったサーモンマリネ",
@@ -72,10 +104,13 @@
       "時短レシピ",
       "おもてなし",
       "魚料理",
-      "マリネ"
+      "マリネ",
+      "副菜"
     ],
     "servings": 2,
-    "source": "https://x.com/yohtaro007/status/1917445228765798864"
+    "source": "https://x.com/yohtaro007/status/1917445228765798864",
+    "time": 30,
+    "calories": 350
   },
   {
     "title": "切らない！爆速 鶏めし",
@@ -85,10 +120,13 @@
       "時短レシピ",
       "炊飯器レシピ",
       "鶏肉料理",
-      "洗い物少ない"
+      "洗い物少ない",
+      "主菜"
     ],
     "servings": "2〜3",
-    "source": "https://foodistnote.recipe-blog.jp/article/205276/"
+    "source": "https://foodistnote.recipe-blog.jp/article/205276/",
+    "time": 40,
+    "calories": 500
   },
   {
     "title": "厚切りフレンチトースト",
@@ -97,10 +135,14 @@
     "tags": [
       "時短レシピ",
       "朝食",
-      "パン"
+      "パン",
+      "主菜",
+      "スイーツ"
     ],
     "servings": 2,
-    "source": "https://mi-journey.jp/foodie/80139/"
+    "source": "https://mi-journey.jp/foodie/80139/",
+    "time": 20,
+    "calories": 500
   },
   {
     "title": "基本のテーブルロール",
@@ -109,10 +151,13 @@
     "tags": [
       "時短レシピ",
       "冷蔵保存3日可能",
-      "パン"
+      "パン",
+      "主菜"
     ],
     "servings": 4,
-    "source": "https://foodistnote.recipe-blog.jp/article/226528/"
+    "source": "https://foodistnote.recipe-blog.jp/article/226528/",
+    "time": 20,
+    "calories": 1200
   },
   {
     "title": "塩こうじオムライス",
@@ -122,10 +167,13 @@
       "オムライス",
       "塩こうじレシピ",
       "優しい味",
-      "20分以内"
+      "20分以内",
+      "主菜"
     ],
     "servings": 2,
-    "source": "https://www.hikarimiso.co.jp/recipe/1278-5/"
+    "source": "https://www.hikarimiso.co.jp/recipe/1278-5/",
+    "time": 30,
+    "calories": 600
   },
   {
     "title": "旨塩ねぎダレ",
@@ -135,10 +183,13 @@
       "万能ダレ",
       "焼肉",
       "ご飯のお供",
-      "野菜レシピ"
+      "野菜レシピ",
+      "タレ"
     ],
     "servings": "作りやすい量",
-    "source": "https://www.instagram.com/reel/DGsV0CfpNnW/?igsh=MXc4cDVpNnVpampweQ=="
+    "source": "https://www.instagram.com/reel/DGsV0CfpNnW/?igsh=MXc4cDVpNnVpampweQ==",
+    "time": 10,
+    "calories": 100
   },
   {
     "title": "浜田チャーハン",
@@ -147,10 +198,13 @@
     "tags": [
       "チャーハン",
       "中華料理",
-      "再現レシピ"
+      "再現レシピ",
+      "主菜"
     ],
     "servings": 1,
-    "source": "https://cookpad.com/jp/recipes/21671744-%E6%B5%9C%E7%94%B0%E3%83%81%E3%83%A3%E3%83%BC%E3%83%8F%E3%83%B3%E8%8A%B8%E8%83%BD%E4%BA%BA%E6%A0%BC%E4%BB%98%E3%81%91%E5%8B%95%E7%94%BB%E3%81%82%E3%82%8A"
+    "source": "https://cookpad.com/jp/recipes/21671744-%E6%B5%9C%E7%94%B0%E3%83%81%E3%83%A3%E3%83%BC%E3%83%8F%E3%83%B3%E8%8A%B8%E8%83%BD%E4%BA%BA%E6%A0%BC%E4%BB%98%E3%81%91%E5%8B%95%E7%94%BB%E3%81%82%E3%82%8A",
+    "time": 20,
+    "calories": 350
   },
   {
     "title": "炊飯器マッシュポテト",
@@ -160,10 +214,26 @@
       "時短レシピ",
       "炊飯器レシピ",
       "ポテト料理",
-      "簡単おかず"
+      "簡単おかず",
+      "副菜"
     ],
     "servings": "2〜3",
-    "source": "https://x.com/ys_docomoPro/status/1913159699060670968"
+    "source": "https://x.com/ys_docomoPro/status/1913159699060670968",
+    "time": 30,
+    "calories": 350
+  },
+  {
+    "title": "豚汁",
+    "link": "/recipes/豚汁",
+    "image": "https://mi-journey.jp/foodie/wp-content/uploads/2017/04/1704_16_tonjiru_01.jpg",
+    "tags": [
+      "時短レシピ",
+      "汁物"
+    ],
+    "servings": 4,
+    "source": "https://mi-journey.jp/foodie/36632/",
+    "time": 30,
+    "calories": 350
   },
   {
     "title": "餡かけ焼きそば",
@@ -173,9 +243,12 @@
       "あんかけ",
       "焼きそば",
       "麺料理",
-      "がっつり飯"
+      "がっつり飯",
+      "主菜"
     ],
     "servings": 2,
-    "source": "https://www.instagram.com/reel/DG5SyiIzPEB/?igsh=MXFpcW44NWpybzYydQ=="
+    "source": "https://www.instagram.com/reel/DG5SyiIzPEB/?igsh=MXFpcW44NWpybzYydQ==",
+    "time": 20,
+    "calories": 600
   }
 ]
