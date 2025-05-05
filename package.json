@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "update": "vitepress build docs && pnpm update",
-    "create-recipe": "cd package && pnpm start",
+    "create-recipe": "npx tsx package/src/index.ts",
     "create-recipe:dev": "cd package && pnpm dev",
+    "start:mcp": "cd mcp-server && uv sync && uv run server.py",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
