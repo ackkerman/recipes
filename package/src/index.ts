@@ -39,10 +39,11 @@ program
       promptText = `料理画像からレシピを読み取り、Markdownテンプレートに沿って出力してください。`;
     } else {
       const rawText = await scrapeTextFromPage(url);
+      console.log(`✅ Scraped text: ${rawText.length} characters`);
       promptText = formatWithTemplate(rawText);
     }
 
-    const markdown = await generateMarkdown(promptText, isImageUrl(url) ? url : undefined);
+    const markdown = await generateMarkdown(promptText, isImageUrl(url) ? url : null);
     fs.writeFileSync(options.output, markdown, "utf-8");
     console.log(`✅ Recipe generated: ${options.output}`);
   });

@@ -5,13 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "update": "vitepress build docs && pnpm update",
     "create-recipe": "cd package && pnpm start",
     "create-recipe:dev": "cd package && pnpm dev",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "serve": "vitepress serve docs"
-  
   },
   "keywords": [],
   "author": "",
@@ -23,8 +23,8 @@
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "feather-icons": "4",
+    "feather-icons": "^4.29.2",
     "gray-matter": "^4.0.3",
-    "vue-feather": "2"
+    "vue-feather": "^2.0.0"
   }
 }

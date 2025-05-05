@@ -23,6 +23,8 @@ export function getRecipeList() {
         tags: data.tags || [],
         servings: data.servings || 1,
         source: data.source || '',
+        time: data.time || 0,
+        calories: data.calories || 0
       }
     })
 }
