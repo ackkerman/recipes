@@ -2,8 +2,10 @@
 title: 料理名
 servings: 2
 source: https://example.com/recipe
-tags: [時短レシピ, 冷蔵保存3日可能]
+tags: [主菜or副菜or汁物orスイーツorその他, ..., ex: 時短レシピ, 冷蔵保存3日可能]
 image: path/to/image.jpg
+time: 30分
+calories: 400kcal
 ---
 
 # 🍳 料理名
