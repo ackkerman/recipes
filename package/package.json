@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "type": "module",
   "bin": {
     "create-recipe": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "tsc",
+    "build": "tsup src/index.ts --format esm --dts --clean",
     "start": "node dist/index.js"
   },
   "keywords": [],
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.3",
+    "tsup": "^8.4.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }

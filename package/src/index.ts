@@ -1,8 +1,10 @@
+#!/usr/bin/env node
 import { Command } from "commander";
 import { scrapeTextFromPage } from "./scraper";
 import { formatWithTemplate } from "./formatter";
 import { generateMarkdown } from "./openai";
 import * as fs from "fs";
+import * as path from "path";
 
 const program = new Command();
 
@@ -33,6 +35,7 @@ program
   .description("Scrape recipe page or image and generate markdown file")
   .argument("<url>", "URL of recipe page or image")
   .option("-o, --output <filename>", "Output filename", "recipe.md")
+  .option("--output_dir <dirname>", "Output directory", ".")
   .action(async (url, options) => {
     let promptText: string;
     if (isImageUrl(url)) {
@@ -43,9 +46,37 @@ program
       promptText = formatWithTemplate(rawText);
     }
 
-    const markdown = await generateMarkdown(promptText, isImageUrl(url) ? url : null);
-    fs.writeFileSync(options.output, markdown, "utf-8");
-    console.log(`✅ Recipe generated: ${options.output}`);
+    const markdown = await generateMarkdown(promptText, isImageUrl(url) ? url : null)
+      .then((markdown) => {
+        // ```markdown ... ``` の囲みを除去
+        const codeBlockRegex = /```markdown\n([\s\S]*?)\n```/;
+        const match = markdown.match(codeBlockRegex);
+        return match ? match[1] : markdown;
+      });
+
+    // output_dirとoutputを絶対パスにする
+    const outputDir = path.resolve(process.cwd(), options.output_dir);
+    let outputFilename = options.output;
+
+    if (outputFilename === "recipe.md") {
+      // markdownのfrontmatterからtitleを取得
+      const frontmatter = markdown.match(/---\n([\s\S]*?)\n---/);
+      if (frontmatter) {
+        const titleMatch = frontmatter[1].match(/title:\s*(.*)/);
+        if (titleMatch) {
+          const sanitizedTitle = titleMatch[1].trim().replace(/[\/\\:*?"<>|]/g, '_'); // ファイル名に使えない文字を置換
+          outputFilename = sanitizedTitle + ".md";
+        }
+      }
+    }
+
+    const outputFilePath = path.join(outputDir, outputFilename);
+
+    // 出力ディレクトリが存在しない場合は作成
+    await fs.promises.mkdir(path.dirname(outputFilePath), { recursive: true });
+
+    fs.writeFileSync(outputFilePath, markdown, "utf-8");
+    console.log(`✅ Recipe generated: ${outputFilePath}`);
   });
 
 program.parse();

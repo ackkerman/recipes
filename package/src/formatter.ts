@@ -10,6 +10,8 @@ image: path/to/image.jpg
 servings: 2
 source: <URL>
 tags: [主菜or副菜or汁物orスイーツorその他, ..., ex: 時短レシピ, 冷蔵保存3日可能]
+time: 30分
+calories: 400kcal
 ---
 
 # 🍳 料理名
