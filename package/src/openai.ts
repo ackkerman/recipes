@@ -11,22 +11,25 @@ const client = new OpenAI(
 
 
 export async function generateMarkdown(prompt: string, imageUrl?: string): Promise<string> {
-  // @ts-ignore
+  const message_contents = [
+    { type: "text", text: prompt },
+  ]
+  if (imageUrl) {
+    message_contents.push({
+      type: 'image_url',
+      // @ts-ignore
+      image_url: {
+        url: imageUrl
+      }
+    })
+  }
+  
   const res = await client.chat.completions.create({
     model: "gpt-4o",
     messages: [
       {
         role: "user",
-        content: [
-          { type: "text", text: prompt },
-          // @ts-ignore
-          imageUrl && {
-            type: 'image_url',
-            image_url: {
-              url: imageUrl
-            }
-          }
-        ]
+        content: JSON.stringify(message_contents),
       },
     ],
   });

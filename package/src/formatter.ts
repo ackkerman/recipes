@@ -6,10 +6,10 @@ export function formatWithTemplate(rawText: string): string {
 [Template]
 ---
 title: 料理名
+image: path/to/image.jpg
 servings: 2
 source: <URL>
-tags: [時短レシピ]
-image: path/to/image.jpg
+tags: [主菜or副菜or汁物orスイーツorその他, ..., ex: 時短レシピ, 冷蔵保存3日可能]
 ---
 
 # 🍳 料理名
